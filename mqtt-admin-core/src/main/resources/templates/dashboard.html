@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{common.title}">MQTT Admin</title>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+    <div th:replace="~{layout/header :: nav}"></div>
+    <div class="container mt-4">
+        <h1>Dashboard</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Dashboard Overview</h5>
+                <p class="card-text">View and manage your MQTT dashboard here.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

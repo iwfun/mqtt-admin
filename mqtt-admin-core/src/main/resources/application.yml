@@ -1,0 +1,35 @@
+spring.application:
+  name: mqtt-admin
+spring.thymeleaf:
+  prefix: classpath:/templates/
+  suffix: .html
+  cache: false
+spring.messages:
+  encoding: UTF-8
+  basename: localization/common,localization/login
+
+spring.mqtt.admin:
+  username: admin
+  password: 123456
+
+
+#database
+spring.datasource:
+  type: com.zaxxer.hikari.HikariDataSource
+  driverClassName: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://${DB_HOST}/${DB_NAME}?useUnicode=true&useSSL=false&characterEncoding=utf8&allowMultiQueries=true&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+  username: ${DB_USERNAME}
+  password: ${DB_PASSWORD}
+  hikari:
+    minimum-idle: 8
+    maximum-pool-size: 256
+    idle-timeout: 60000
+    max-lifetime: 1800000
+    connection-timeout: 30000
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  typeHandlersPackage: com.iwfun.mqtt.admin.core.ibatis.type
+  typeAliasesPackage: com.iwfun.mqtt.admin.core.domain
+  configuration:
+    mapUnderscoreToCamelCase: false
