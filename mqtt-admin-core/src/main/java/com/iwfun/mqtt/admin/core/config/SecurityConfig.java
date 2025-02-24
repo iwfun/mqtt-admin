@@ -44,14 +44,4 @@ public class SecurityConfig {
 
         return http.build();
     }
-
-    @Bean
-    public UserDetailsService userDetailsService(AdminProperties adminProperties) {
-        var admin = User.builder()
-                .username(adminProperties.getUsername())
-                .password("{noop}" + adminProperties.getPassword())
-                .roles(Role.Admin.name().toUpperCase())
-                .build();
-        return new InMemoryUserDetailsManager(admin);
-    }
 }
