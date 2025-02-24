@@ -33,3 +33,4 @@ mybatis-plus:
   typeAliasesPackage: com.iwfun.mqtt.admin.core.domain
   configuration:
     mapUnderscoreToCamelCase: false
+

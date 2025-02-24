@@ -36,5 +36,5 @@ out/
 ### VS Code ###
 .vscode/
 
-###生产环境信息###
+###ignore env configuration(for example: server ip, password, and so on)###
 **/application-*.yml
