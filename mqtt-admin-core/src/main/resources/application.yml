@@ -9,8 +9,8 @@ spring.messages:
   basename: localization/common,localization/login
 
 spring.mqtt.admin:
-  username: admin
-  password: 123456
+  username: ${ADMIN_USERNAME}
+  password: ${ADMIN_PASSWORD}
 
 
 #database
